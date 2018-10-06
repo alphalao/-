@@ -2,6 +2,8 @@ import numpy as np
 import random
 import pylab
 def data_build(size=[100,2],sdv=None,label=("random",[-1,1,5]),dim=0):
+    #size:数据尺寸；sdv:协方差；dim:数据偏移；
+    #库说明：数据维度由size控制，sdv要与size一致
     def data_struct(size,sdv):
         datahalf=np.random.normal(loc=sdv[0],scale=1,size=[size[0],1])
         for b in range(1,size[-1]):
